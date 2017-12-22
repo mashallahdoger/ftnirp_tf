@@ -6,7 +6,7 @@
 /*   By: adauchy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/20 18:01:43 by adauchy           #+#    #+#             */
-/*   Updated: 2017/12/22 19:14:33 by adauchy          ###   ########.fr       */
+/*   Updated: 2017/12/22 20:17:30 by adauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int			ft_upper_s_flag(t_param *param, t_arg *arg)
 	n = 0;
 	str = (wchar_t*)arg->ptr;
 	if (!str)
-		return (write(1, "(null)", 6));
+		str = L"(null)";
 	if (get_size_buffer_u(str, param, &size) > BUFF_MAX)
 		return (-1);
 	while (!param->att.minus && n < param->field_width - size)

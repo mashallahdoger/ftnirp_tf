@@ -6,14 +6,12 @@
 /*   By: adauchy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/20 12:10:30 by adauchy           #+#    #+#             */
-/*   Updated: 2017/12/22 15:45:39 by adauchy          ###   ########.fr       */
+/*   Updated: 2017/12/22 19:49:52 by adauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFTPRINTF_H
 # define LIBFTPRINTF_H
-
-# include <stdio.h>
 
 # include <stdarg.h>
 # include <unistd.h>

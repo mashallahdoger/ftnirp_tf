@@ -6,7 +6,7 @@
 /*   By: adauchy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/20 12:11:29 by adauchy           #+#    #+#             */
-/*   Updated: 2017/12/19 22:50:11 by adauchy          ###   ########.fr       */
+/*   Updated: 2017/12/22 20:49:42 by adauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int			convert_unicode(wchar_t c, char tab[4])
 	nb_bytes = 1;
 	while (--n > 0)
 	{
-		if (c > max)
+		if (max == 1 || (c > max && (max = 1)))
 		{
 			tab[n] = (char)c;
 			tab[n] &= (char)0x3F;

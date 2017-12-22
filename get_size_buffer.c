@@ -6,7 +6,7 @@
 /*   By: adauchy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 18:45:12 by adauchy           #+#    #+#             */
-/*   Updated: 2017/12/22 19:39:52 by adauchy          ###   ########.fr       */
+/*   Updated: 2017/12/22 19:13:52 by adauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,13 +73,13 @@ int			get_size_buffer_u(int *str, t_param *param, int *size)
 
 	*size = 0;
 	count = 0;
-	while ((param->prec == -1 || count < param->prec) && str[count])
+	while ((param->prec == -1 || *size < param->prec) && str[count])
 	{
 		*size += get_size_unicode(str[count]);
 		count += 1;
 	}
-//	if (param->prec != -1 && *size > param->prec)
-//		*size = param->prec;
+	if (param->prec != -1 && *size > param->prec)
+		*size = param->prec;
 	if (param->field_width > *size)
 		return (count + param->field_width - *size);
 	return (*size);
