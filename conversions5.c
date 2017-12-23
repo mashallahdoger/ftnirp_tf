@@ -6,7 +6,7 @@
 /*   By: adauchy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/22 09:41:16 by adauchy           #+#    #+#             */
-/*   Updated: 2017/12/22 14:23:36 by adauchy          ###   ########.fr       */
+/*   Updated: 2017/12/23 13:54:15 by adauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,19 @@ int			ft_upper_a_flag(t_param *param, t_arg *arg)
 
 int			ft_lower_n_flag(t_param *param, t_arg *arg)
 {
-	(void)param;
-	(void)arg;
+	void	*ptr;
+
+	ptr = (void*)arg->ptr;
+	if (param->modifier == HH)
+		*(char*)ptr = (char)arg->si_nb;
+	else if (param->modifier == 'h')
+		*(short*)ptr = (short)arg->si_nb;
+	else if (param->modifier == 'l')
+		*(long*)ptr = (long)arg->si_nb;
+	else if (param->modifier == LL)
+		*(long long*)ptr = (long long)arg->si_nb;
+	else
+		*(int*)ptr = (int)arg->si_nb;
 	return (0);
 }
 

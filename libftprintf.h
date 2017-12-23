@@ -6,7 +6,7 @@
 /*   By: adauchy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/20 12:10:30 by adauchy           #+#    #+#             */
-/*   Updated: 2017/12/22 19:49:52 by adauchy          ###   ########.fr       */
+/*   Updated: 2017/12/23 18:00:21 by adauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # include <stdlib.h>
 # include <wchar.h>
 
-# define ENABLED		1
-# define DISABLED		0
+# define ENABLED			1
+# define DISABLED			0
 
 # define CONVERSIONS		"sSpdDioOuUxXcCeEfFgGaAn%"
 # define ATTRIBUTES			"#0-+ "
@@ -104,7 +104,7 @@ int							ft_put_err(char *str);
 unsigned int				ft_strlen(const char *str);
 void						get_vararg(t_data *data, int index, int type);
 int							get_nb(char *str);
-void						reset_param(t_param *param);
+void						reset_data(t_data *data);
 int							get_size_buffer(char *str, t_param *param,
 								int *size);
 int							get_size_buffer_u(int *str, t_param *param,

@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reset_param.c                                      :+:      :+:    :+:   */
+/*   reset_data.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adauchy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/15 18:08:29 by adauchy           #+#    #+#             */
-/*   Updated: 2017/12/22 13:06:17 by adauchy          ###   ########.fr       */
+/*   Created: 2017/12/23 17:53:09 by adauchy           #+#    #+#             */
+/*   Updated: 2017/12/23 17:56:41 by adauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void			reset_param(t_param *param)
+void			reset_data(t_data *data)
 {
+	t_param		*param;
+	t_arg		*arg;
+
+	param = &data->param;
+	arg = &data->arg;
 	param->att.ashtag = DISABLED;
 	param->att.zero = DISABLED;
 	param->att.minus = DISABLED;
@@ -24,4 +29,9 @@ void			reset_param(t_param *param)
 	param->prec = -1;
 	param->modifier = 0;
 	param->conv = 0;
+	arg->type = NONE;
+	arg->si_nb = 0;
+	arg->un_nb = 0;
+	arg->ptr = NULL;
+	arg->fl_nb = 0;
 }

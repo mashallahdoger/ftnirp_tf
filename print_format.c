@@ -6,7 +6,7 @@
 /*   By: adauchy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 09:10:24 by adauchy           #+#    #+#             */
-/*   Updated: 2017/12/22 19:49:46 by adauchy          ###   ########.fr       */
+/*   Updated: 2017/12/23 17:52:23 by adauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int			print_format(t_data *data, const char *restrict format)
 		{
 			n += 1;
 			ret = 0;
-			reset_param(&data->param);
+			reset_data(data);
 			if (get_param(format, &n, data) == -1)
 				return (-1);
 			index = get_index(data->param.conv, CONVERSIONS);

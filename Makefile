@@ -23,7 +23,7 @@ SRCS =		ft_printf.c				\
 			get_index.c				\
 			get_nb.c				\
 			get_vararg.c			\
-			reset_param.c			\
+			reset_data.c			\
 			get_size_buffer.c		\
 			ft_print_unicode.c		\
 			write_unicode.c			\
